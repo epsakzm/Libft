@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 22:20:47 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/26 23:51:22 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/27 22:23:06 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ static char	*next_word(char const *s, char c)
 char		**ft_split(char const *s, char c)
 {
 	char	**array;
-	char	*word;
 	size_t	i;
 	
 	if (!(array = (char**)malloc(sizeof(char*) * (count_words(s, c) + 1))))
