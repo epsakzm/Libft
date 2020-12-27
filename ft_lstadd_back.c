@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/27 02:01:20 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/27 19:19:33 by hyeopark         ###   ########.fr       */
+/*   Created: 2020/12/27 16:17:27 by hyeopark          #+#    #+#             */
+/*   Updated: 2020/12/27 16:43:56 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	char			*temp;
-	unsigned int	i;
+	t_list	*temp;
 
-	if (!s)
-		return (NULL);
-	i = 0;
-	temp = ft_strdup(s);
-	while (temp[i])
+	if (!lst || !new)
+		return ;
+	if (*lst)
 	{
-		temp[i] = (*f)(i, temp[i]);
-		i++;
+		temp = ft_lstlast(*lst);
+		temp->next = new;
 	}
-	return (temp);
+	else
+		*lst = new;
 }
