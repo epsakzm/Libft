@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 14:16:25 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/28 02:35:04 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/28 16:20:39 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int		is_space(char c)
 			c == '\f' || c == '\r' || c == ' ');
 }
 
-int		ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
 	int i;
 	int sign;
