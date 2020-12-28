@@ -6,13 +6,13 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 14:16:25 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/23 14:35:42 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/28 02:35:04 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_space(char c)
+static int		is_space(char c)
 {
 	return (c == '\t' || c == '\n' || c == '\v' ||
 			c == '\f' || c == '\r' || c == ' ');

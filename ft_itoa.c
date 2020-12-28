@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 23:51:48 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/27 02:00:36 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/28 15:51:37 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,12 @@ char			*ft_itoa(int n)
 	if (!(temp = (char*)malloc(sizeof(char) * 12)))
 		return (NULL);
 	i = 0;
-	while (nb > 0)
+	while (1)
 	{
 		temp[i++] = nb % 10 + '0';
 		nb /= 10;
+		if (!nb)
+			break ;
 	}
 	if (n < 0)
 		temp[i++] = '-';

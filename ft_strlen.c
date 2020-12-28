@@ -6,13 +6,13 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 14:25:33 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/23 14:35:10 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/27 22:45:56 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		strlen(const char *s)
+size_t		ft_strlen(const char *s)
 {
 	size_t		i;
 

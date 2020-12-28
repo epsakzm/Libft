@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 15:33:25 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/26 15:38:19 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/28 16:03:25 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else
 		nb = (unsigned int)n;
-	if (n >= 10)
+	if (nb >= 10)
 		ft_putnbr_fd(nb / 10, fd);
 	ft_putchar_fd(nb % 10 + '0', fd);
 }
