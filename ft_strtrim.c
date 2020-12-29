@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 18:25:32 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/29 18:58:39 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/29 19:13:24 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	j = ft_strlen(s1) - 1;
 	if (i == j + 1)
-	{
-		temp = (char*)malloc(1);
-		temp[0] = 0;
-		return (temp);
-	}
+		return (ft_strdup(""));
 	while (s1[j] && ft_strchr(set, s1[j]) && j >= 0)
 		j--;
 	temp = ft_substr(s1, i, j - i + 1);
