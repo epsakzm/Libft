@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 17:23:14 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/26 17:13:17 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/29 13:53:52 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t		i;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	while (i < n)
 	{

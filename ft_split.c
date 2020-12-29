@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 22:20:47 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/27 22:27:05 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/29 19:01:37 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ char			**ft_split(char const *s, char c)
 			s++;
 		if (*s && *s != c)
 		{
-			array[i] = next_word(s, c);
+			if (!(array[i] = next_word(s, c)))
+				return (NULL);
 			i++;
 			while (*s && *s != c)
 				s++;

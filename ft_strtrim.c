@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 18:25:32 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/28 16:16:18 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/29 18:58:39 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 	char	*temp;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;

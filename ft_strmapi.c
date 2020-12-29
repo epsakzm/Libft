@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/27 02:01:20 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/27 19:19:33 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/29 14:34:18 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s)
 		return (NULL);
 	i = 0;
-	temp = ft_strdup(s);
+	if (!(temp = ft_strdup(s)))
+		return (NULL);
 	while (temp[i])
 	{
 		temp[i] = (*f)(i, temp[i]);

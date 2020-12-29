@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/25 14:58:05 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/25 15:31:39 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/29 14:12:30 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,22 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int flag;
+	char	*temp;
 
-	flag = 0;
-	while (*s)
+	if (!(*s) || !c)
 	{
-		if (*s == (char)c)
-			flag = 1;
-		s++;
+		if (!c)
+			return ((char*)s + ft_strlen(s));
+		else
+			return (NULL);
 	}
-	if (c == (char)0)
-		return ((char*)s);
-	while (*s != (char)c)
-		s--;
-	return (flag ? (char*)s : NULL);
+	temp = (char*)s;
+	while (*temp)
+		temp++;
+	while (--temp && *temp != c)
+	{
+		if (s == temp)
+			return (NULL);
+	}
+	return (temp);
 }

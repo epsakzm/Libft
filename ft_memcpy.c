@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 15:17:07 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/24 21:03:14 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/29 13:52:02 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t		i;
 
-	if (!dst)
+	if (!dst && !src)
 		return (NULL);
 	i = 0;
 	while (i < n)

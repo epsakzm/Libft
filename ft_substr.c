@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 14:06:52 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/26 14:18:51 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/29 14:33:07 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
+	if ((unsigned int)ft_strlen(s) <= start)
+		return (ft_strdup(""));
 	if (!(temp = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	i = 0;

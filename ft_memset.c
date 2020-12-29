@@ -6,7 +6,7 @@
 /*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 14:47:42 by hyeopark          #+#    #+#             */
-/*   Updated: 2020/12/23 14:50:38 by hyeopark         ###   ########.fr       */
+/*   Updated: 2020/12/29 13:50:55 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t		i;
 
-	if (!b)
-		return (0);
 	i = 0;
 	while (i < len)
 	{
